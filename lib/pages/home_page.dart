@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:app_ui/pages/all_post_page.dart';
 import 'package:app_ui/pages/bottom_navbar.dart';
 import 'package:app_ui/pages/tabs.dart';
@@ -42,7 +40,8 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                         image: const DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage('assets/images/profile.jpg')),
+                            image: AssetImage(
+                                'assets/images/profile/profile.jpg')),
                         shape: BoxShape.circle,
                         border: Border.all(color: Colors.green, width: 2.0),
                       ),

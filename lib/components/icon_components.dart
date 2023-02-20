@@ -7,3 +7,5 @@ final style = ElevatedButton.styleFrom(
     // <-- Radius
   ),
 );
+
+const iconcolor = Color(0xff85BB65);

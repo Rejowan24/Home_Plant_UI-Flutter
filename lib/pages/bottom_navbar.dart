@@ -1,3 +1,5 @@
+import 'package:app_ui/pages/community_page.dart';
+import 'package:app_ui/pages/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -28,20 +30,35 @@ class _BottonNavBarState extends State<BottonNavBar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
-            CupertinoIcons.home,
-            color: iconcolor,
-            size: 28,
+          InkWell(
+            onTap: () {
+              Navigator.pop(context, const HomePage());
+            },
+            child: Icon(
+              CupertinoIcons.home,
+              color: iconcolor,
+              size: 28,
+            ),
           ),
           Icon(
             Icons.message,
             color: iconcolor,
             size: 28,
           ),
-          Icon(
-            CupertinoIcons.person_2,
-            color: iconcolor,
-            size: 28,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CommunityPage(),
+                ),
+              );
+            },
+            child: Icon(
+              CupertinoIcons.person_2,
+              color: iconcolor,
+              size: 28,
+            ),
           ),
           Icon(
             Icons.bookmark,
